@@ -2,7 +2,9 @@ Goal: Run same process/code as 10-10-15, but measure size of output files.
 In future runs, trim-low-abund.py params will be modified, so I want to 
 be able to compare file sizes from here on out.
 
-note - it seems like working files were being deleted between 1-rst and 2-rst, so diginorm never happened, and resource allocation may not be accurate.  This is the last file chronologically with that possible problem.
+note - it seems like working files were being deleted between 1-rst and 2-rst, 
+so diginorm never happened, and resource allocation may not be accurate.  
+This is the last file chronologically with that possible problem.
 
 Code: (copied from 10-10-15 README.txt)
 
