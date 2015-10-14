@@ -1,0 +1,38 @@
+sudo chmod a+rwxt /mnt
+sudo apt-get -y install git-core
+
+cd /home/ubuntu
+rm -fr literate-resting khmer-protocols
+git clone https://github.com/dib-lab/literate-resting.git
+git clone https://github.com/dib-lab/khmer-protocols.git -b jem-streaming
+
+cd khmer-protocols/mrnaseq
+
+## vim 1-quality.rst # change version number on line 49 to match the release to test
+
+for i in [1-2]-*.rst
+do
+   /home/ubuntu/literate-resting/scan.py $i || break
+done
+
+### START MONITORING (in another SSH session)
+
+
+for i in [1-2]-*.rst.sh
+do
+   bash $i |& tee ${i%%.rst.sh}.out || break
+done
+
+
+## SAR monitoring commands ##
+
+# to run
+   sudo apt-get install sysstat -y
+   sar -u -r -d -o times.dat 1
+
+# to extract
+
+ sar -d -p -f times.dat > disk.txt
+   sar -u -f times.dat > cpu.txt
+   sar -r -f times.dat > ram.txt
+   gzip *.txt
