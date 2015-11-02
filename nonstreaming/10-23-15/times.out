@@ -1,0 +1,11 @@
+1-quality INSTALL Fri Oct 23 22:44:00 UTC 2015
+1-quality TRIM Fri Oct 23 22:44:46 UTC 2015
+1-quality DONE Fri Oct 23 22:47:01 UTC 2015
+2-diginorm normalize1-pe Fri Oct 23 22:47:01 UTC 2015
+2-diginorm filter-abund Fri Oct 23 22:48:46 UTC 2015
+2-diginorm extract Fri Oct 23 22:49:10 UTC 2015
+2-diginorm DONE Fri Oct 23 22:49:17 UTC 2015
+3-big-assembly compileTrinity Fri Oct 23 22:49:18 UTC 2015
+3-big-assembly extractReads Fri Oct 23 22:51:30 UTC 2015
+3-big-assembly assemble Fri Oct 23 22:51:35 UTC 2015
+3-big-assembly DONE Fri Oct 23 22:54:46 UTC 2015
